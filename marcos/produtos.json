@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "nome": "financiamento",
+            "tipo": "r",
+            "valor": 10000
+        },
+        {
+            "id": "2",
+            "nome": "financiamento",
+            "tipo": "c",
+            "valor": 1000
+        },
+        {
+            "id": "3",
+            "nome": "financiamento",
+            "tipo": "c",
+            "valor": 1000
+        }
+    ]
+}

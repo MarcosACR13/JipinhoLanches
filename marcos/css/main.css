@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100&display=swap');
+
+:root {
+    --box-shadow: 0 3px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --claro:  rgba(71, 92, 122, 0.691);
+    --mais-claro:  rgba(71, 92, 122, 0.486);
+    --text: #F1D1B5;
+    --primaria: rgba(252, 188, 109, 0.863);
+    --secundaria: #D8737F;
+    --vermelho: #f03434;
+    --verde:    #00b16a
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--escuro);
+    background-image: linear-gradient(150deg, rgba(252, 188, 109, 0.863) 40%, #D8737F);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Catamaran', sans-serif !important;
+    color: #F1D1B5 !important;
+    min-height: 400px;
+}
+
+.titulo{
+    background-color: var(--mais-claro);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    width: 70vw;
+    margin: 0 0 10px 0;
+    padding: 10px 0px;
+    border-radius: 20% 0%;
+    font-size: 3em;
+    z-index: 0;
+}
+
+.principal{
+    background-color: var(--mais-claro);
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: var(--box-shadow);
+    min-height: 270px;
+}
+
+.modal-todo{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+    opacity: 0;
+
+}
+
+.modal-todo.ativo{
+    display: flex;
+    opacity: 1;
+}
+
+
+.transacoes{
+    width: 76vw;
+    background-image: linear-gradient(300deg, rgba(252, 188, 109,1) 30%, #D8737F);
+    z-index: 4;
+    display: flex;
+    visibility: none;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.modal-todo>h1{
+    font-size: 2.5rem;  
+    position: relative; 
+    z-index: 5;
+    padding: 10px 0px;
+    transition: all 0.3 ease-in-out;
+    width: 76vw;
+    text-align: center;
+    margin-bottom: 0px;
+    background-image: linear-gradient(300deg, rgba(252, 188, 109,1) 10%, #D8737F);
+}
+
+#modal{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 0;
+    z-index: 1000;
+    background-color: red;
+}
+
+.transacoes.ativo,.transacoes.ativo>div{
+    height: 90vh;
+    visibility: visible;
+    opacity: 1;
+}
+
+@keyframes TransaAtivo{
+    from{
+        height: 0px;
+        visibility: none;
+        opacity: 0;
+    }
+    to{
+ 
+    }
+}
+
+@keyframes TransaInativo{
+    from{
+        height: 90vh;
+        opacity: 1;
+        visibility: visible;
+    }
+    to{
+        opacity: 0;
+        height: 0px;
+        visibility: none;
+    }
+}
+
+
+.transacoes-lista{
+    width: 70%;
+}
+
+.card-mini{
+    text-align: center;
+    height: 35px;
+    width: 100%;
+    margin: 5px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    transition: opacity 0.3s ease;
+    box-shadow: var(--box-shadow);
+    
+}
+
+.card-mini>div{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transform: translate(18px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-mini>div>h6{
+    margin: 0 3px;
+    width: 100px;
+}
+
+.card-mini.c>div>span{
+    background-color: var(--verde);
+    height: 83%;
+    width: 3px;
+}
+
+.card-mini.r>div>span{
+    background-color: var(--vermelho);
+    height: 83%;
+    width: 3px;
+}
+
+.card-mini.c{
+    background-color: var(--vermelho);
+}
+.card-mini.r{
+    background-color: var(--verde);
+}
+
+
+.delete{
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    width: 35px;
+    font-size: 20px;
+    text-align: center;
+    height: 100%;
+    transform: translate(19px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-mini:hover .delete{
+    opacity: 1;
+}
+
+@media only screen and (min-width: 900px) {
+    .titulo {
+        width: 40vw;
+    }
+    .modal-todo>h1{
+        font-size: 4.2rem !important;
+    }
+
+    .principal{
+        width: 40vw;
+    }
+    .card-marcos{
+        padding: 2px 30px;
+    }
+  }
+
+.principal>div{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.card-marcos{
+    margin-top: 10px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 2px 6%;
+}
+.card-marcos>h6{
+    margin: 5px;
+}
+
+
+#menu-lateral{
+    position: relative;
+    float: left;    
+
+}
+
+
+
+#formulario{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    min-height: 320px;
+}
+
+#formulario>div{
+    height: 100%;
+}
+#formulario>form{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.invisivel{
+    display: none;
+}

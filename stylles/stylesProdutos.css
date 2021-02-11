@@ -1,0 +1,85 @@
+body{
+    min-height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+}
+
+.pai-produtos{
+    text-align: center;
+    margin-top: 20px;
+    min-width: 90vw;
+    max-width: 60vw;
+};
+
+.produtos{
+    display: flex;
+    flex-direction: wrap;
+}
+
+.card-produtos{
+    background-color: rgba(68, 29, 29,0.3);
+    margin: 10px 0px;
+    padding: 10px;
+    
+}
+.editar{
+    padding: 5px;
+    margin: 5px;
+    height: 100%;
+    background-color: rgb(233, 31, 31);
+    -webkit-box-shadow: 0px 6px 9px -2px rgba(0,0,0,0.56); 
+    box-shadow: 0px 6px 9px -2px rgba(0,0,0,0.56);
+}
+
+.salvar{
+    padding: 5px;
+    margin: 20px 20vw;
+    height: 100%;
+    background-color: rgb(0, 255, 55);
+    color: black;
+    -webkit-box-shadow: 0px 6px 9px -2px rgba(0,0,0,0.56); 
+    box-shadow: 0px 6px 9px -2px rgba(0,0,0,0.56);
+}
+
+.teste{
+    background-color: rgb(108, 108, 119);
+}
+
+button{
+    border: none;
+    display: flexbox;
+}
+
+.produtos-filtro{
+    padding: 5px;
+    color: ;
+}
+
+input[type=text],textarea {
+    text-align: center;
+    background-color: rgba(68, 29, 29,0.3);
+    border: none;
+    margin-top: 6px;
+    border-bottom: 1px solid white;
+    width: 100px;
+    
+    animation-duration: 1s;
+    animation-name: input_text;
+    animation-fill-mode: forwards;
+};
+
+input[type=text]:focus,textarea:focus{
+    animation-duration: 0.5s;
+    animation-name: input_text;
+    animation-fill-mode: forwards;
+}
+
+@keyframes input_text{
+    to{
+        width: 80vw;
+        color: white;
+    }
+}

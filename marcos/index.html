@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/materialize.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+    <button id="modal" status="inativo"></button>
+
+    <h1 class="titulo">CONTROLE FINANCEIRO</h1>
+    <div class="principal">
+        <div>
+            <div id="receitas" tipo="r" class="card-marcos verde">
+                <h6>Receitas</h6>
+                <p>+ R$ 0</p>
+            </div>
+            <div id="custos" tipo="c" class="card-marcos vermelho">
+                <h6>Custos</h6>
+                <p>- R$ 0</p>
+            </div>
+            <div id="saldo" tipo="s" class="card-marcos">
+                <h6>Saldo</h6>
+                <p>+ R$ <span>0</span></p>
+            </div>
+        </div>
+
+
+        <div id="formulario">
+            <form action="">
+                <div class="row">
+                    <div class="input-field">
+                        <input id="descricao" type="text" class="validate">
+                        <label for="descricao">Transação</label>
+                    </div>
+                    <div class="switch">
+                        <label>
+                            Despesa
+                            <input id="tipo" type="checkbox">
+                            <span class="lever"></span>
+                            Receita
+                        </label>
+                    </div>
+                    <div class="input-field">
+                        <input id="valor" type="text" class="validate">
+                        <label for="valor">Valor</label>
+                    </div>
+                    <div id="button-form">
+                        <button class="btn waves-effect waves-light" id="submit" type="submit">Submit
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+    <div class="modal-todo" id="transacoes">
+        <h1>TRANSAÇÕES</h1>
+        <div class="transacoes">
+            
+            <div class="transacoes-lista">
+
+            </div>
+            <div class="input-field col s12">
+                <select multiple>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="/js/materialize.js"></script>
+<script src="/js/inclusao.js"></script>
+<script src="/js/transacoes.js"></script>
+<script>
+
+    
+
+    const modais = () => {
+        const transa = document.querySelector('.transacoes')
+        const modalTodo = document.querySelector('.modal-todo')
+        modalTodo.classList.toggle('ativo')
+        document.querySelector('.titulo').classList.toggle('invisivel')
+        document.querySelector('.principal').classList.toggle('invisivel')
+        transa.classList.toggle('ativo')
+
+    }
+
+    document.querySelector('#modal').addEventListener('click', (e) => {
+        modais()
+        inicia()
+    })
+
+    document.querySelector('#transacoes').addEventListener('click', event => {
+    const id = event.target.id
+    if (id === document.querySelector('#transacoes').id) {
+        modais()
+    }
+})
+
+</script>
+
+</html>

@@ -1,0 +1,409 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: linear-gradient(339deg, rgba(235, 103, 15, 1) 0%, rgba(233, 127, 56, 1) 62%, rgba(235, 103, 15, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+.tela {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+.row {
+    margin: 0px !important;
+}
+
+.container-fluid,
+.container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+#Cardapio {
+    margin-left: 10vw;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+li {
+    display: block;
+}
+
+.pedir {
+    background-color: rgb(28, 179, 28);
+    border-radius: 40% 0% 30% 0%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    z-index: 200;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    text-align: pointer;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+}
+
+.pedir>img {
+    height: 33px;
+    width: 33px;
+    margin-right: 3px;
+}
+
+.pedir>h4 {
+    position: flex;
+    justify-self: center;
+}
+
+.button-confirm {
+    border: none;
+    padding: 3px 0px;
+    height: 30px;
+    width: 50%;
+    background-color: rgba(12, 235, 49, 0.493);
+    font-size: 12pt;
+    bottom: 0vmin;
+    color: rgb(65, 41, 25);
+    justify-self: baseline;
+}
+
+.button-cancel {
+    border: none;
+    padding: 3px 0px;
+    height: 30px;
+    width: 50%;
+    background-color: rgba(235, 57, 12, 0.493);
+    font-size: 12pt;
+    bottom: 0vmin;
+    color: rgb(65, 41, 25);
+    justify-self: baseline;
+}
+
+.padrao button {
+    width: 170pt;
+    border: 1px solid;
+    padding: 5px;
+    margin-top: 10px;
+    border: dotted black 1.5pt;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, rgb(247, 244, 242), rgba(196, 181, 173, 0.705));
+    font-size: 12pt;
+    color: rgb(194, 88, 18);
+}
+
+.button {
+    border: none;
+    padding: 3px 0px;
+    height: 30px;
+    width: 100%;
+    background-color: rgba(71, 63, 57, 0.315);
+    font-size: 12pt;
+    bottom: 0vmin;
+    color: rgb(221, 197, 197);
+    justify-self: baseline;
+}
+
+.button-active {
+    background-image: url(../imgs/detalhe-cardapio.png);
+    background-position-y: 100%;
+    background-repeat: repeat-x;
+    -webkit-animation: button-active 4s linear infinite running;
+    -ms-animation: button-active 4s linear infinite running;
+    animation: button-active 4s linear infinite running;
+}
+
+#menu {
+    transform: translateX(-57%);
+    position: fixed;
+    z-index: 1;
+}
+
+#nav-itens {
+    background-color: rgb(20, 25, 175);
+    color: white;
+    transition: all 0.5s;
+}
+
+#hamburguer-nav {
+    height: 25px;
+    margin-left: 0px !important;
+}
+
+#check {
+    display: none;
+}
+
+#icon {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.container-fluid {
+    margin-left: 50px !important;
+    margin-right: -20 !important;
+}
+
+#banner {
+    position: flex;
+}
+
+.inicial {
+    color: white;
+    text-align: center;
+    background-image: url(../imgs/h2-img.png) !important;
+    background-repeat: no-repeat;
+    animation-duration: 1.5s;
+    background-size: 500px 100vh;
+    display: block;
+    float: right;
+    height: 100vh;
+    z-index: -100;
+}
+
+#inicial-texto {
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+}
+
+.texto {
+    text-align: center;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+
+.texto table {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.padrao {
+    font-family: "Vegan Style";
+    color: cornsilk;
+}
+
+.center-self {
+    align-self: center;
+    justify-self: center;
+}
+
+.center-itens {
+    align-items: center;
+    justify-items: center;
+}
+
+.center-content {
+    align-content: center;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: "Vegan Style";
+    src: url("VeganStylePersonalUse-5Y58.ttf");
+    /* para IE */
+    src: local("Vegan"), url("VeganStylePersonalUse-5Y58.ttf") format("opentype");
+}
+
+.padrao h1 {
+    font-size: 40pt;
+    border: 2px red;
+}
+
+#texto-faca-pedido {
+    justify-items: center;
+    display: grid;
+}
+
+#grid-pedidos {
+    display: grid;
+}
+
+.menu-pedidos {
+    margin: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: unset;
+    background-color: rgba(71, 63, 57, 0.315);
+    padding: 8px;
+    color: whitesmoke;
+}
+
+.menu-pedidos:hover {
+    background-color: rgba(71, 63, 57, 0.658);
+}
+
+.card {
+    text-align: center;
+    color: white;
+    padding: 10pt;
+    margin: 20px;
+    border-radius: 15pt;
+    background-color: rgba(71, 63, 57, 0.048);
+    -webkit-box-shadow: 12px 10px 30px -5px #603D21;
+    box-shadow: 12px 10px 30px -5px #603D21;
+    display: flex;
+}
+
+.card>input {
+    display: flex;
+    align-self: center;
+    justify-self: baseline;
+}
+
+@keyframes button-active {
+    from {
+        background-position: left 0px bottom;
+    }
+    to {
+        background-position: left -202px bottom;
+    }
+}
+
+
+/*
+    Animações
+*/
+
+.ola-in {
+    animation-duration: 3s;
+    animation-name: ola-in;
+}
+
+@keyframes ola-in {
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.ola-out {
+    animation-duration: 3s;
+    animation-name: ola-out;
+}
+
+@keyframes ola-out {
+    to {
+        transform: translateX(-57%);
+    }
+}
+
+@keyframes inicial {
+    from {
+        transform: translateY(50%);
+        opacity: 0%;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 100%;
+    }
+}
+
+footer {
+    margin-top: 4vh;
+    text-align: center;
+    padding: 20px 0px;
+    width: 100vw;
+    background-color: rgba(121, 86, 60, 0.212);
+    -webkit-box-shadow: 12px 10px 30px -5px #603D21;
+    box-shadow: -5px -5px 15px -5px #603D21;
+    font-size: 10pt;
+}
+
+footer a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: whitesmoke;
+}
+
+.menu-pedir>p {
+    margin: 0px !important;
+}
+
+.menu-pedir>p:nth-child(1) {
+    font-size: 130%;
+}
+
+.menu-pedir>p:nth-child(2) {
+    font-size: 70%;
+}
+
+.menu-pedir {
+    transition: all ease-in 0.3s;
+}
+
+.menu-pedir-hover {
+    font-size: 0% !important;
+    color: black
+}
+
+.slider-pai{
+    justify-items: center;
+}
+
+.slider-pai p{
+    font-size: 11pt;
+    margin-bottom: 2px;
+}
+
+.slider::after{
+    content: "→";
+}
+
+.slider {
+    width: 70% !important;
+}
+.slider::-webkit-slider-thumb {
+    background-color: rebeccapurple !important;
+    height: 100px !important;
+}
+
+
+
+/*
+@keyframes ola-out{
+    to{
+        -ms-flex: 0 0 0%;
+        flex: 0 0 0%;
+        max-width: 00%;
+        visibility: hidden !important;
+    }
+}
+
+
+@keyframes ola-out{
+    from{
+
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+        opacity: 100%;
+    }
+    to{
+        -ms-flex: 0 0 0%;
+        flex: 0 0 0%;
+        max-width: 0%;
+        opacity: 0%;
+    }
+}*/

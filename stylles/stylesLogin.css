@@ -1,0 +1,70 @@
+body{
+    min-height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+}
+.login{
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 300px;
+    width: 400px;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    border-radius: 30% 0% 30% 0%;
+}
+
+.login2{
+    text-align: center;
+    color: white;
+}
+
+.button{
+    border: none;
+    padding: 3px 0px;
+    height: 30px;
+    width: 100%;
+    background-color: rgba(71, 63, 57, 0.315);
+    font-size: 12pt;
+    bottom: 0vmin;
+    color: rgb(221, 197, 197);
+    justify-self: baseline;
+}
+input[type=text], input[type=password]{
+    border: none;
+    border-bottom: 2px solid rgb(226, 226, 226);
+    background-color:transparent;
+    color: white;
+}
+input[type=text]:focus, input[type=password]:focus{
+    background-image: url(/imgs/detalhe-cardapio.png);
+    background-position-y: 100%;
+    background-repeat: repeat-x;
+    -webkit-animation: button-active 4s linear infinite running;
+    -ms-animation: button-active 4s linear infinite running;
+    animation: button-active 4s linear infinite running;
+    border: none;
+}
+
+
+
+@keyframes animateInput{
+    25%{
+        border-bottom: 2px solid rgb(226, 226, 226);
+    }
+    50%{
+        border-bottom: 2.5px solid rgb(226, 226, 226);
+    }
+    75%{
+        border-bottom: 3px solid rgb(226, 226, 226);
+    }
+    100%{
+        border-bottom: 3px solid rgb(226, 226, 226);
+    }
+}
