@@ -183,7 +183,7 @@ const criaCategorias = () => {
     const menu = document.querySelector('#menu-categorias')
 
 
-    getJSON('./dados.json', function (err, data) {
+    getJSON('js/dados.json', function (err, data) {
         if (err !== null) {
             console.log('Ocorreu um erro' + err);
         } else {
