@@ -1,4 +1,292 @@
 var timer = null;
+const dados = {
+    "categorias": [
+        "SANDUICHES",
+        "BEBIDAS",
+    ],
+    "itens": [
+        {
+            "id": "15",
+            "nome": "OPCAO",
+            "descricao": "PAO DE HAMBURGUER, 2 HAMBURGUERES, LOMBO, BACON, 2 OVOS, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO ",
+            "categoria": "SANDUICHES",
+            "valor": "24"
+        },
+        {
+            "id": "16",
+            "nome": "X BACON",
+            "descricao": "PAO DE HAMBURGER, HAMBURGUER, BACON, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATA",
+            "categoria": "SANDUICHES",
+            "valor": "15"
+        },
+        {
+            "id": "17",
+            "nome": "X TUDO",
+            "descricao": "PAO DE HAMBURGUER, HAMBURGUER, BACON, OVO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATA",
+            "categoria": "SANDUICHES",
+            "valor": "16"
+        },
+        {
+            "id": "18",
+            "nome": "X EGG",
+            "descricao": "PAO DE HAMBURGUER, HAMBURGUER, OVO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
+            "categoria": "SANDUICHES",
+            "valor": "15"
+        },
+        {
+            "id": "19",
+            "nome": "X SALADA",
+            "descricao": "PAO DE HAMBURGUER, HAMBURGUER, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
+            "categoria": "SANDUICHES",
+            "valor": "14"
+        },
+        {
+            "id": "20",
+            "nome": "MISTO",
+            "descricao": "PAO DE HAMBURGUER, PRESUNTO E MUSSARELA",
+            "categoria": "SANDUICHES",
+            "valor": "10"
+        },
+        {
+            "id": "21",
+            "nome": "BIG LOMBO",
+            "descricao": "PAO DE HAMBURGUER, LOMBO, 2 HAMBURGUERES, BACON, OVO, PRESUNTO, MUSSARELA, TOMATE, ALFACE, MILHO E B",
+            "categoria": "SANDUICHES",
+            "valor": "22"
+        },
+        {
+            "id": "22",
+            "nome": "X LOMBO",
+            "descricao": "PAO DE HAMBURGUER, LOMBO, BACON, OVO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
+            "categoria": "SANDUICHES",
+            "valor": "20"
+        },
+        {
+            "id": "23",
+            "nome": "X LOMBO EGG",
+            "descricao": "PAO DE HAMBURGUER, LOMBO, OVO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
+            "categoria": "SANDUICHES",
+            "valor": "19"
+        },
+        {
+            "id": "24",
+            "nome": "X LOMBO BACON",
+            "descricao": "PAO DE HAMBURGUER, LOMBO, BACON, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
+            "categoria": "SANDUICHES",
+            "valor": "18"
+        },
+        {
+            "id": "25",
+            "nome": "X LOMBO SALDA",
+            "descricao": "PAO DE HAMBURGUER, LOMBO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
+            "categoria": "SANDUICHES",
+            "valor": "17"
+        },
+        {
+            "id": "26",
+            "nome": "BIG FRANGO",
+            "descricao": "PAO DE HAMBURGUER, FILE DE FRANGO, 2 HAMBURGUERES, OVO, BACON, PRESUNTO, MUSSARELA, ALFACE, TOMATE, ",
+            "categoria": "SANDUICHES",
+            "valor": "22"
+        },
+        {
+            "id": "27",
+            "nome": "X FRANGO",
+            "descricao": "PAO DE HAMBURGUER, FILE DE FRANGO, OVO, BACON, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
+            "categoria": "SANDUICHES",
+            "valor": "20"
+        },
+        {
+            "id": "28",
+            "nome": "X FRANGO BACON",
+            "descricao": "PAO DE HAMBURGUER, FILE DE FRANGO, BACON, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
+            "categoria": "SANDUICHES",
+            "valor": "19"
+        },
+        {
+            "id": "29",
+            "nome": "X FRANGO EGG",
+            "descricao": "PAO DE HAMBURGUER, FILE DE FRANGO, OVO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
+            "categoria": "SANDUICHES",
+            "valor": "18"
+        },
+        {
+            "id": "30",
+            "nome": "X FRANGO SALADA",
+            "descricao": "PAO DE HAMBURGUER, FILE DE FRANGO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
+            "categoria": "SANDUICHES",
+            "valor": "17"
+        },
+        {
+            "id": "31",
+            "nome": "FILE DE TILAPIA",
+            "descricao": "",
+            "categoria": "PORCOES",
+            "valor": "28"
+        },
+        {
+            "id": "32",
+            "nome": "LOMBO",
+            "descricao": "",
+            "categoria": "PORCOES",
+            "valor": "30"
+        },
+        {
+            "id": "33",
+            "nome": "CALABRESA",
+            "descricao": "",
+            "categoria": "PORCOES",
+            "valor": "25"
+        },
+        {
+            "id": "34",
+            "nome": "BATATA, BACON E QUEIJO",
+            "descricao": "",
+            "categoria": "PORCOES",
+            "valor": "25"
+        },
+        {
+            "id": "35",
+            "nome": "REFRI LATA",
+            "descricao": "",
+            "categoria": "BEBIDAS",
+            "valor": "5"
+        },
+        {
+            "id": "36",
+            "nome": "REFRI 600ML",
+            "descricao": "",
+            "categoria": "BEBIDAS",
+            "valor": "7"
+        },
+        {
+            "id": "37",
+            "nome": "REFRI 2L",
+            "descricao": "",
+            "categoria": "BEBIDAS",
+            "valor": "10"
+        },
+        {
+            "id": "39",
+            "nome": "SKOL LATA",
+            "descricao": "",
+            "categoria": "BEBIDAS ALCOOLICAS",
+            "valor": "5"
+        },
+        {
+            "id": "40",
+            "nome": "SKOL GARRAFA",
+            "descricao": "",
+            "categoria": "BEBIDAS ALCOOLICAS",
+            "valor": "8"
+        },
+        {
+            "id": "41",
+            "nome": "ANTARCTICA ORIGINAL GARRAFA",
+            "descricao": "",
+            "categoria": "BEBIDAS ALCOOLICAS",
+            "valor": "8"
+        },
+        {
+            "id": "42",
+            "nome": "BRAHMA LATA",
+            "descricao": "",
+            "categoria": "BEBIDAS ALCOOLICAS",
+            "valor": "4"
+        },
+        {
+            "id": "43",
+            "nome": "BRAHMA GARRAFA",
+            "descricao": "",
+            "categoria": "BEBIDAS ALCOOLICAS",
+            "valor": "8.5"
+        },
+        {
+            "id": "44",
+            "nome": "AGUA MINERAL 500ML",
+            "descricao": "",
+            "categoria": "BEBIDAS",
+            "valor": "2"
+        },
+        {
+            "id": "45",
+            "nome": "VODKA DOSE",
+            "descricao": "",
+            "categoria": "DOSE",
+            "valor": "6"
+        },
+        {
+            "id": "46",
+            "nome": "MONTILLA",
+            "descricao": "",
+            "categoria": "DOSE",
+            "valor": "4"
+        },
+        {
+            "id": "47",
+            "nome": "JURUBEBA",
+            "descricao": "",
+            "categoria": "DOSE",
+            "valor": "2"
+        },
+        {
+            "id": "48",
+            "nome": "CATUABA",
+            "descricao": "",
+            "categoria": "DOSE",
+            "valor": "2"
+        },
+        {
+            "id": "49",
+            "nome": "PARA TUDO",
+            "descricao": "",
+            "categoria": "DOSE",
+            "valor": "2"
+        },
+        {
+            "id": "50",
+            "nome": "IPIOCA",
+            "descricao": "",
+            "categoria": "DOSE",
+            "valor": "2"
+        },
+        {
+            "id": "51",
+            "nome": "CONHAQUE",
+            "descricao": "",
+            "categoria": "DOSE",
+            "valor": "2"
+        },
+        {
+            "id": "52",
+            "nome": "NATU NOBILIS",
+            "descricao": "",
+            "categoria": "DOSE",
+            "valor": "5"
+        },
+        {
+            "id": "53",
+            "nome": "PASSPORT",
+            "descricao": "",
+            "categoria": "DOSE",
+            "valor": "7"
+        },
+        {
+            "id": "54",
+            "nome": "PINGA",
+            "descricao": "",
+            "categoria": "DOSE",
+            "valor": "1"
+        },
+        {
+            "id": "55",
+            "nome": "CAMPARI",
+            "descricao": "",
+            "categoria": "DOSE",
+            "valor": "5"
+        }
+    ]
+}
 
 
 window.addEventListener('scroll', function () {
@@ -96,69 +384,10 @@ function AlterCategoria(valor) {
 };
 
 function pedir() {
-    var mensagem = 'https://api.whatsapp.com/send?phone=5537988414107&text=BOA NOITE, GOSTARIA DE';
-    var mensagem2;
-    var i;
-
-    var paipai = document.getElementById("Cardapio");
-
-    for (var x = 0; x < paipai.children.length; x++) {
-        var pai = document.getElementById(paipai.children[x].id);
-
-        for (var i = 0; i < pai.children.length; i++) {
-            var pai_2 = pai.children[i];
-            if (pai_2.tagName == "DIV") {
-                if (pai_2.children[3].value != 0) {
-                    if (mensagem == 'https://api.whatsapp.com/send?phone=5537988414107&text=Boa noite, gostaria de: ') {
-                        mensagem = mensagem + ": " + pai_2.children[3].value + " " + pai_2.children[0].innerText;
-                    } else {
-                        mensagem = mensagem + ", " + pai_2.children[3].value + " " + pai_2.children[0].innerText;
-                    };
-                };
-            };
-        };
-    };
-    var endereco_ = prompt("Por favor, digite o endereço de entrega", "EX: RUA GABRIEL TENENTE, 183");
-    if (endereco_ != "EX: RUA GABRIEL TENENTE, 183") {
-        mensagem = mensagem + " NO ENDEREÇO: " + endereco_.toUpperCase();
-    } else {
-        alert("Digite um endereço");
-        exit;
-    }
-
-    var troco_ = prompt("Será necessario troco?\nPara maquina de cartão deixar em branco", "");
-
-    if (troco_ == "") {
-        mensagem = mensagem + " E MAQUINA DE CARTAO";
-    } else {
-        mensagem = mensagem + " E TROCO PARA: R$" + troco_;
-    };
-
+    var mensagem = 'https://api.whatsapp.com/send?phone=5537988414107';
     window.open(mensagem, '_blank');
 };
 
-function teste() {
-    var menu = document.getElementById("menu-pai");
-    menu
-}
-
-
-var getJSON = function (url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
-    xhr.responseType = 'json';
-    xhr.onreadystatechange = function () {
-        var status = xhr.status;
-        if (status === 200) {
-            //Callback caso de tudo certo
-            callback(null, xhr.response);
-        } else {
-            //Callback caso de algum erro
-            callback(status, xhr.response);
-        }
-    };
-    xhr.send();
-};
 
 const criaItens = (dados) => {
     const itens = document.querySelector('#cardapio-itens')
@@ -182,35 +411,25 @@ const criaItens = (dados) => {
 const criaCategorias = () => {
     const menu = document.querySelector('#menu-categorias')
 
+    categorias = dados['categorias']
 
-    getJSON('js/dados.json', function (err, data) {
-        if (err !== null) {
-            console.log('Ocorreu um erro' + err);
-        } else {
+    //cria os botoes
+    categorias.map(categoria => {
+        const li = document.createElement('li')
+        // console.log(t)
+        li.setAttribute('class', 'menu-pedidos button-active col-auto')
+        li.setAttribute('onclick', `AlterCategoria('${categoria}')`)
+        li.setAttribute('id', `BTN-${categoria}`)
+        li.appendChild(
+            document.createTextNode(categoria)
+        )
+        ///<li class='' onclick='AlterCategoria(\"$categoria\")' id='BTN-$categoria'> $categoria</li>
+        menu.append(li)
+    })
 
-            categorias = data['categorias']
-
-            //cria os botoes
-            categorias.map(categoria => {
-                const li = document.createElement('li')
-                // console.log(t)
-                li.setAttribute('class', 'menu-pedidos button-active col-auto')
-                li.setAttribute('onclick', `AlterCategoria('${categoria}')`)
-                li.setAttribute('id', `BTN-${categoria}`)
-                li.appendChild(
-                    document.createTextNode(categoria)
-                )
-                ///<li class='' onclick='AlterCategoria(\"$categoria\")' id='BTN-$categoria'> $categoria</li>
-                menu.append(li)
-            })
-
-            AlterCategoria("SANDUICHES");
-
-            criaItens(data)
-
-        }
-    });
-
+    
+    criaItens(dados)
+    AlterCategoria("SANDUICHES");
 
     //<li class='menu-pedidos button-active col-auto' onclick='AlterCategoria(\"$categoria\")' id='BTN-$categoria'> $categoria</li>
 }
