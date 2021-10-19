@@ -149,25 +149,18 @@
             "nome": "REFRI LATA",
             "descricao": "",
             "categoria": "BEBIDAS",
-            "valor": "4"
+            "valor": "5"
         },
         {
             "id": "36",
             "nome": "REFRI 600ML",
             "descricao": "",
             "categoria": "BEBIDAS",
-            "valor": "6"
+            "valor": "7"
         },
         {
             "id": "37",
             "nome": "REFRI 2L",
-            "descricao": "",
-            "categoria": "BEBIDAS",
-            "valor": "8"
-        },
-        {
-            "id": "38",
-            "nome": "COCA COLA 2L",
             "descricao": "",
             "categoria": "BEBIDAS",
             "valor": "10"
