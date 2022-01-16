@@ -16,105 +16,105 @@
             "nome": "X BACON",
             "descricao": "PAO DE HAMBURGER, HAMBURGUER, BACON, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATA",
             "categoria": "SANDUICHES",
-            "valor": "15"
+            "valor": "17"
         },
         {
             "id": "17",
             "nome": "X TUDO",
             "descricao": "PAO DE HAMBURGUER, HAMBURGUER, BACON, OVO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATA",
             "categoria": "SANDUICHES",
-            "valor": "16"
+            "valor": "18"
         },
         {
             "id": "18",
             "nome": "X EGG",
             "descricao": "PAO DE HAMBURGUER, HAMBURGUER, OVO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
             "categoria": "SANDUICHES",
-            "valor": "15"
+            "valor": "17"
         },
         {
             "id": "19",
             "nome": "X SALADA",
             "descricao": "PAO DE HAMBURGUER, HAMBURGUER, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
             "categoria": "SANDUICHES",
-            "valor": "14"
+            "valor": "16"
         },
         {
             "id": "20",
             "nome": "MISTO",
-            "descricao": "PAO DE HAMBURGUER, PRESUNTO E MUSSARELA",
+            "descricao": "PAO DE HAMBURGUER, HAMBURGUER, PRESUNTO E MUSSARELA",
             "categoria": "SANDUICHES",
-            "valor": "10"
+            "valor": "12"
         },
         {
             "id": "21",
             "nome": "BIG LOMBO",
             "descricao": "PAO DE HAMBURGUER, LOMBO, 2 HAMBURGUERES, BACON, OVO, PRESUNTO, MUSSARELA, TOMATE, ALFACE, MILHO E B",
             "categoria": "SANDUICHES",
-            "valor": "22"
+            "valor": "25"
         },
         {
             "id": "22",
             "nome": "X LOMBO",
             "descricao": "PAO DE HAMBURGUER, LOMBO, BACON, OVO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
             "categoria": "SANDUICHES",
-            "valor": "20"
+            "valor": "22"
         },
         {
             "id": "23",
             "nome": "X LOMBO EGG",
             "descricao": "PAO DE HAMBURGUER, LOMBO, OVO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
             "categoria": "SANDUICHES",
-            "valor": "19"
+            "valor": "21"
         },
         {
             "id": "24",
             "nome": "X LOMBO BACON",
             "descricao": "PAO DE HAMBURGUER, LOMBO, BACON, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
             "categoria": "SANDUICHES",
-            "valor": "18"
+            "valor": "21"
         },
         {
             "id": "25",
             "nome": "X LOMBO SALDA",
             "descricao": "PAO DE HAMBURGUER, LOMBO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
             "categoria": "SANDUICHES",
-            "valor": "17"
+            "valor": "20"
         },
         {
             "id": "26",
             "nome": "BIG FRANGO",
             "descricao": "PAO DE HAMBURGUER, FILE DE FRANGO, 2 HAMBURGUERES, OVO, BACON, PRESUNTO, MUSSARELA, ALFACE, TOMATE, ",
             "categoria": "SANDUICHES",
-            "valor": "22"
+            "valor": "25"
         },
         {
             "id": "27",
             "nome": "X FRANGO",
             "descricao": "PAO DE HAMBURGUER, FILE DE FRANGO, OVO, BACON, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
             "categoria": "SANDUICHES",
-            "valor": "20"
+            "valor": "22"
         },
         {
             "id": "28",
             "nome": "X FRANGO BACON",
             "descricao": "PAO DE HAMBURGUER, FILE DE FRANGO, BACON, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
             "categoria": "SANDUICHES",
-            "valor": "19"
+            "valor": "21"
         },
         {
             "id": "29",
             "nome": "X FRANGO EGG",
             "descricao": "PAO DE HAMBURGUER, FILE DE FRANGO, OVO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
             "categoria": "SANDUICHES",
-            "valor": "18"
+            "valor": "21"
         },
         {
             "id": "30",
             "nome": "X FRANGO SALADA",
             "descricao": "PAO DE HAMBURGUER, FILE DE FRANGO, PRESUNTO, MUSSARELA, ALFACE, TOMATE, MILHO E BATATA",
             "categoria": "SANDUICHES",
-            "valor": "17"
+            "valor": "20"
         },
         {
             "id": "31",
@@ -142,7 +142,7 @@
             "nome": "BATATA, BACON E QUEIJO",
             "descricao": "",
             "categoria": "PORCOES",
-            "valor": "25"
+            "valor": "30"
         },
         {
             "id": "35",
